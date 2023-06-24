@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 7vw 1fr 15%;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+    gap: 1%;
+    margin: 1vh auto;
+    width: 70vw;
+    height: 100%;
+}
+
+header {
+    grid-area: header
+}
+
+main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 26vw 26vw repeat(2, 20vw);
+    grid-template-areas:
+        "main-foto main-foto main-foto main-foto"
+        "content content content content"
+        "foto-1 foto-2 foto-3 foto-4"
+        "question question question question";
+    column-gap: 7px;
+}
+
+.main-foto {
+    grid-area: main-foto
+}
+
+.content {
+    grid-area: content
+}
+
+.question {
+    grid-area: question;
+    background-color: rgb(184, 184, 184);
+}
+
+footer {
+    grid-area: footer;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.logo {
+    width: 10vw
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    font-size: 1.54vw;
+    padding: 1vw;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.footer-logo {
+    width: 10vw;
+    align-self: start;
+}
+
+footer {
+    font-size: 1.7vw;
+}
+
+.footer4-text {
+    color: blue;
+    font-size: 2.3vw;
+}
+
+.footer4-text2 {
+    font-size: 1vw;
+}
